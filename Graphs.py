@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-
+import streamlit as st
 
 df = pd.read_csv('ed_patient_data.csv')
 
@@ -36,6 +36,6 @@ axes[1,1].set_xlabel('Staff Count')
 axes[1,1].set_ylabel('Avg Wait (min)')
 
 plt.tight_layout()
-plt.savefig('ed_overview.png', dpi=150)
-plt.show()
-print(' Charts saved to ed_overview.png')
+
+# This is how you render matplotlib figures in Streamlit
+st.pyplot(fig)

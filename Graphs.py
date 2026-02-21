@@ -1,6 +1,8 @@
 import pandas as pd
-df = pd.read_csv('ed_patient_data.csv')
 import matplotlib.pyplot as plt
+
+
+df = pd.read_csv('ed_patient_data.csv')
 
 fig, axes = plt.subplots(2, 2, figsize=(14, 9))
 fig.suptitle('ED Patient Data — Overview', fontsize=15, fontweight='bold')
